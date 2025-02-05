@@ -1,1 +1,36 @@
 
+---
+title: "DeepSeek R1"
+author: "DeepSeek"
+description: "The DeepSeek R1 model offers efficient language processing for basic NLP tasks, optimized for quick deployment and cost-effective AI solutions."
+---
+
+# DeepSeek R1
+
+| General        |                                                                  |
+| -------------- | ---------------------------------------------------------------- |
+| Release date   | 2023                                                             |
+| Author         | [DeepSeek](https://www.deepseek.com)                             |
+| Website        | [DeepSeek Models](https://www.deepseek.com/models)               |
+| Repository     | https://github.com/deepseek-ai                                   |
+| Type           | Foundation Language Model                                        |
+
+The DeepSeek R1 model provides a lightweight yet powerful solution for basic natural language processing tasks. Optimized for speed and efficiency, this model delivers reliable performance for text classification, entity recognition, and simple text generation.
+
+## Key Features
+- **4K Token Context Window**: Handles medium-length documents effectively
+- **Multi-Lingual Support**: Base capabilities in 5 major languages
+- **Low Resource Requirements**: Runs efficiently on standard hardware
+- **Fine-Tuning Ready**: Compatible with common ML frameworks
+
+## Start Building with DeepSeek R1
+
+```python
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+model = AutoModelForCausalLM.from_pretrained("deepseek/deepseek-r1-base")
+tokenizer = AutoTokenizer.from_pretrained("deepseek/deepseek-r1-base")
+
+inputs = tokenizer("Translate to French: Hello world", return_tensors="pt")
+outputs = model.generate(**inputs)
+print(tokenizer.decode(outputs[0]))
