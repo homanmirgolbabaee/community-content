@@ -36,7 +36,7 @@ DeepSeek represents China's breakthrough in democratizing AI through:
 ### Key Components
 | Component               | Implementation Details                          | Performance Gain |
 |-------------------------|------------------------------------------------|------------------|
-| **Multi-Head Latent Attention** | Compressed KV cache via W<sup>DKV</sup> matrices | 4.2x faster inference |
+| **Multi-Head Latent Attention** | Compressed KV cache via W^{DKV} | 4.2x faster inference |
 | **Device-Limited Routing**      | Top-M device selection for MoE layers          | 83% comms reduction |
 | **FP8 Training Framework**      | 14.8T token pre-training at 158 TFLOPS/GPU     | 2.8M H800 hours   |
 | **Three-Level Balancing**       | Expert/Device/Comm balance losses              | 99.7% GPU utilization |
